@@ -1,125 +1,135 @@
 /* Reset basique */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  header {
-    background-color: #4267B2;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  nav a:hover {
-    color: #ddd;
-  }
-  
-  main {
-    padding: 3rem 1rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .intro {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  
-  .intro img {
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .intro p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background-color: #4267B2;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #365899;
-  }
-  
-  .facebook-section {
-    text-align: center;
-  }
-  
-  .facebook-section h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #4267B2;
-  }
-  
-  .facebook-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .facebook-links a {
-    padding: 1rem 1.5rem;
-    background-color: #4267B2;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .facebook-links a:hover {
-    background-color: #365899;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #ddd;
-    margin-top: 2rem;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #111; /* neutre au lieu de bleu FB */
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff4444; /* petit effet rouge en hover */
+}
+
+main {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.intro img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #111;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+.social-section {
+  text-align: center;
+}
+
+.social-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #111;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Styles spécifiques par réseau */
+.social-links a {
+  padding: 1rem 1.5rem;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.05);
+}
+
+.social-links .facebook { background-color: #4267B2; }
+.social-links .facebook:hover { background-color: #365899; }
+
+.social-links .instagram { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
+  #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-links .youtube { background-color: #FF0000; }
+.social-links .youtube:hover { background-color: #cc0000; }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ddd;
+  margin-top: 2rem;
+}
