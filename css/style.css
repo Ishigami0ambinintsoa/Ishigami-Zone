@@ -5,34 +5,47 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #faf9f6; /* clair et artistique */
   color: #333;
   line-height: 1.6;
 }
 
+/* Liens */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* Header */
 header {
-  background-color: #111; /* neutre au lieu de bleu FB */
+  background: linear-gradient(135deg, #6a9cf0, #a1c4fd); /* bleu pastel */
   color: white;
   padding: 2rem 1rem;
   text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 2px;
 }
 
 header p {
   font-size: 1.2rem;
+  font-style: italic;
 }
 
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -43,28 +56,32 @@ nav {
 nav a {
   color: white;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: opacity 0.3s;
 }
 
 nav a:hover {
-  color: #ff4444; /* petit effet rouge en hover */
+  opacity: 0.8;
 }
 
+/* Contenu principal */
 main {
   padding: 3rem 1rem;
   max-width: 1000px;
   margin: auto;
+  text-align: center;
+   flex: 1
 }
-
+/* Section intro */
 .intro {
   text-align: center;
   margin-bottom: 4rem;
 }
 
 .intro img {
-  max-width: 300px;
-  border-radius: 10px;
+  max-width: 250px;
+  border-radius: 50%;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .intro p {
@@ -72,20 +89,23 @@ main {
   margin-bottom: 1.5rem;
 }
 
+/* Bouton style artistique */
 .button {
   display: inline-block;
   padding: 0.8rem 2rem;
-  background-color: #111;
+  background: linear-gradient(135deg, #6a9cf0, #a1c4fd); /* bleu pastel */
   color: white;
   font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 30px;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .button:hover {
-  background-color: #444;
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
+/* Section réseaux sociaux */
 .social-section {
   text-align: center;
 }
@@ -93,7 +113,7 @@ main {
 .social-section h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #111;
+  color: #6a9cf0; /* bleu pastel */
 }
 
 .social-links {
@@ -103,33 +123,37 @@ main {
   gap: 1rem;
 }
 
-/* Styles spécifiques par réseau */
 .social-links a {
-  padding: 1rem 1.5rem;
-  color: white;
-  border-radius: 8px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   transition: transform 0.3s;
 }
 
-.social-links a:hover {
-  transform: scale(1.05);
+.social-links a svg {
+  width: 28px;
+  height: 28px;
 }
 
-.social-links .facebook { background-color: #4267B2; }
-.social-links .facebook:hover { background-color: #365899; }
-
-.social-links .instagram { 
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
-  #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
+/* Couleurs par réseau */
+.social-links .facebook { background: linear-gradient(135deg, #6a9cf0, #a1c4fd); }
+.social-links .instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
 .social-links .youtube { background-color: #FF0000; }
-.social-links .youtube:hover { background-color: #cc0000; }
 
+.social-links a:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #ddd;
+  background-color: #f1f1f1;
   margin-top: 2rem;
+  border-top: 2px dashed #ddd;
+  font-size: 0.9rem;
 }
